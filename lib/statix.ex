@@ -367,7 +367,7 @@ defmodule Statix do
       end
 
       def distribution(key, val, options \\ []) do
-        Statix.transmit(current_statix(), :distribution, key, val, options)
+        log_if_enabled(fn -> Statix.transmit(current_statix(), :distribution, key, val, options) end)
       end
 
       def measure(key, options \\ [], fun) when is_function(fun, 0) do
