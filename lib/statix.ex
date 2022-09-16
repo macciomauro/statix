@@ -402,7 +402,6 @@ defmodule Statix do
         timing: 3,
         measure: 3,
         set: 3,
-        set: 3,
         distribution: 3
       )
     end
